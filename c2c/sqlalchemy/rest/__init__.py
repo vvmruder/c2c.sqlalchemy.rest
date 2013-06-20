@@ -94,7 +94,7 @@ class REST(object):
     def count(self, request):
         if has_permission('view', self.mapped_class, request) \
                 or not hasattr(self.mapped_class, '__acl__'):
-            return {'count':self.session().query(self.mapped_class).count()}
+            return self.session().query(self.mapped_class).count()
         raise HTTPForbidden()
 
     def create(self, request):
