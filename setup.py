@@ -11,7 +11,7 @@ install_requires = [
     'pyramid',
     'sqlalchemy',
     'geoalchemy',
-    'shapely==1.2.17',
+    'shapely==1.2.17' #set fix version to avoid conflicts,
 ]
 
 tests_require = [
